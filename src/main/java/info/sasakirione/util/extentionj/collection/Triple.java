@@ -1,6 +1,9 @@
 package info.sasakirione.util.extentionj.collection;
 
-public class Triple<T,U,V> {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Triple<T,U,V> implements Tuple {
     private final Pair<T, Pair<U, V>> value;
 
     public Triple(T value1, U value2, V value3) {
@@ -18,5 +21,13 @@ public class Triple<T,U,V> {
 
     public V third() {
         return value.second().second();
+    }
+
+    public static <T> List<T> getList(Triple<T, T, T> triple) {
+        ArrayList<T> list = new ArrayList<>();
+        list.add(triple.first());
+        list.add(triple.second());
+        list.add(triple.third());
+        return list;
     }
 }
