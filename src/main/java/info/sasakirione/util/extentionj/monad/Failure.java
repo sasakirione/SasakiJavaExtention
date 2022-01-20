@@ -10,4 +10,9 @@ public class Failure implements Try<Throwable>{
      public Throwable get() {
         return exception;
      }
+
+    @Override
+    public boolean isSuccess() {
+        return false;
+    }
 }

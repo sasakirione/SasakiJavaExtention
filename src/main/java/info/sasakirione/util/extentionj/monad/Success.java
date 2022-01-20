@@ -10,4 +10,9 @@ public class Success<T> implements Try<T>{
     public T get() {
         return value;
     }
+
+    @Override
+    public boolean isSuccess() {
+        return true;
+    }
 }
