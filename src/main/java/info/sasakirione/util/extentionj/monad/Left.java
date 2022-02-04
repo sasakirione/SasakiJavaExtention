@@ -1,6 +1,6 @@
 package info.sasakirione.util.extentionj.monad;
 
-public class Left<A, B> implements Either<A, B>{
+public final class Left<A, B> implements Either<A, B>{
     private final A value;
 
     public Left(A a) {

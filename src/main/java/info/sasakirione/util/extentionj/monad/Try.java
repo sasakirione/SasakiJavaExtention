@@ -2,7 +2,7 @@ package info.sasakirione.util.extentionj.monad;
 
 import java.util.function.Function;
 
-public interface Try<T> {
+public sealed interface Try<T> permits Success, Failure {
     T get();
 
     boolean isSuccess();

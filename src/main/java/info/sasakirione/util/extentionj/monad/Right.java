@@ -1,6 +1,6 @@
 package info.sasakirione.util.extentionj.monad;
 
-public class Right<A, B> implements Either<A, B>{
+public final class Right<A, B> implements Either<A, B>{
     private final B value;
 
     public Right(B b) {
